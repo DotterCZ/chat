@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/DotterCZ/static/css/main.6cdc23ea.chunk.css",
+    "main.js": "/DotterCZ/static/js/main.b65916cc.chunk.js",
+    "main.js.map": "/DotterCZ/static/js/main.b65916cc.chunk.js.map",
+    "runtime-main.js": "/DotterCZ/static/js/runtime-main.a7ee5e13.js",
+    "runtime-main.js.map": "/DotterCZ/static/js/runtime-main.a7ee5e13.js.map",
+    "static/js/2.bc973ed6.chunk.js": "/DotterCZ/static/js/2.bc973ed6.chunk.js",
+    "static/js/2.bc973ed6.chunk.js.map": "/DotterCZ/static/js/2.bc973ed6.chunk.js.map",
+    "index.html": "/DotterCZ/index.html",
+    "static/css/main.6cdc23ea.chunk.css.map": "/DotterCZ/static/css/main.6cdc23ea.chunk.css.map",
+    "static/js/2.bc973ed6.chunk.js.LICENSE.txt": "/DotterCZ/static/js/2.bc973ed6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a7ee5e13.js",
+    "static/js/2.bc973ed6.chunk.js",
+    "static/css/main.6cdc23ea.chunk.css",
+    "static/js/main.b65916cc.chunk.js"
+  ]
+}
