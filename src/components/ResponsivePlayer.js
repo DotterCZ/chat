@@ -6,7 +6,7 @@ const ResponsivePlayer = ({url}) => {
   return (
     <div className='player-wrapper'>
       <ReactPlayer
-        controls
+        controls={false}
         playing
         muted
 
