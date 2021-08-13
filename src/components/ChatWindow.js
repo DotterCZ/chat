@@ -25,12 +25,12 @@ const ChatWindow = () => {
     useEffect(() => {
         const interval = setInterval(() => {
 
-            const url = "https://webinar.dotter.cz/data/JSON/index.php";
+            const url = "https://webinar.dotter.cz/data/1/JSON/index.php";
             fetch(url)
              .then(result => result.json())
              .then(data => setData(data))
 
-            console.log('Logs every 6 seconds');
+            // console.log('Logs every 6 seconds');
           }, MINUTE_MS);
 
           return () => clearInterval(interval);
@@ -52,7 +52,7 @@ const ChatWindow = () => {
                         // muted
 
                         className='react-player'
-                        url='https://webinar.dotter.cz/data/videos/video.mp4'
+                        url='https://webinar.dotter.cz/data/1/videos/video.mp4'
                         width='95%'
                         height='95%'
 
