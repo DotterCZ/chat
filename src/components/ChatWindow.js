@@ -11,32 +11,58 @@ const ChatWindow = () => {
     // }
 
     const [data, setData] = useState([]);
+    const [videoUrl, setVideoUrl] = useState([]);
 
     const [showAt, setShowAt] = useState(0);
+    const [loading, setLoading] = useState(true);
+
 
     const handleWatchComplete = state => {
 
         setShowAt(state.playedSeconds);        
         console.log(showAt);
     }
+
+    //  console.log(videoUrl[0].url);
     
     const MINUTE_MS = 3000;
 
     useEffect(() => {
+
         const interval = setInterval(() => {
 
-            const url = "https://webinar.dotter.cz/data/JSON/index.php";
+            const fetchVideoUrl = "https://webinar.dotter.cz/data/videos/index.php?video=1";
+            fetch(fetchVideoUrl)
+             .then(result => result.json())
+             .then(videoUrl => setVideoUrl(videoUrl))
+             .then(loading => setLoading(false))
+
+            const url = "https://webinar.dotter.cz/data/JSON/index.php?video=1";
             fetch(url)
              .then(result => result.json())
              .then(data => setData(data))
 
-            console.log('Logs every 6 seconds');
+            // console.log('Logs every 3 seconds');
           }, MINUTE_MS);
 
           return () => clearInterval(interval);
        
-    }, [])
+    }, [data, videoUrl])    
 
+    function renderVideo() {
+        return <ReactPlayer
+        controls
+        playing
+        // muted
+
+        className='react-player'
+        url={videoUrl[0].url}
+        width='95%'
+        height='95%'
+
+        onProgress={handleWatchComplete}
+    />
+    }
     
 
     return (
@@ -46,18 +72,7 @@ const ChatWindow = () => {
                     url={url}
                 /> */}
                 <div className='player-wrapper'>
-                    <ReactPlayer
-                        controls
-                        playing
-                        // muted
-
-                        className='react-player'
-                        url='https://webinar.dotter.cz/data/videos/video.mp4'
-                        width='95%'
-                        height='95%'
-
-                        onProgress={handleWatchComplete}
-                    />
+                    {!loading ? renderVideo() : 'Připojování k živému vysílání!'}
                 </div>
             </div>
             <div className="page-content page-container" id="page-content">
