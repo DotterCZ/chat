@@ -1,11 +1,21 @@
 
 import ChatWindow from './components/ChatWindow';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <ChatWindow />
-    
+    <Router>
+      <Switch>
+        <Route path="/:id" exact>
+          <ChatWindow />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
