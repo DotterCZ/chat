@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react';
 // import ResponsivePlayer from './ResponsivePlayer';
 // import ChatBubble from './ChatBubble';
 import ReactPlayer from 'react-player';
+import { useParams } from 'react-router';
 
 const ChatWindow = () => {
+
+    const params = useParams();
 
     // constructor() {
     //     super();
@@ -31,13 +34,13 @@ const ChatWindow = () => {
 
         const interval = setInterval(() => {
 
-            const fetchVideoUrl = "https://webinar.dotter.cz/data/videos/index.php?video=1";
+            const fetchVideoUrl = "https://webinar.dotter.cz/data/videos/index.php?video=" + params.id;
             fetch(fetchVideoUrl)
              .then(result => result.json())
              .then(videoUrl => setVideoUrl(videoUrl))
              .then(loading => setLoading(false))
 
-            const url = "https://webinar.dotter.cz/data/JSON/index.php?video=1";
+            const url = "https://webinar.dotter.cz/data/JSON/index.php?video=   " + params.id;
             fetch(url)
              .then(result => result.json())
              .then(data => setData(data))
@@ -47,13 +50,13 @@ const ChatWindow = () => {
 
           return () => clearInterval(interval);
        
-    }, [data, videoUrl])    
+    }, [data, videoUrl, params])    
 
     function renderVideo() {
         return <ReactPlayer
         controls
-        playing
-        // muted
+        playing={true}
+        muted={true}
 
         className='react-player'
         url={videoUrl[0].url}
