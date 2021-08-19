@@ -34,13 +34,13 @@ const ChatWindow = () => {
 
         const interval = setInterval(() => {
 
-            const fetchVideoUrl = "https://webinar.dotter.cz/data/videos/index.php?video=" + params.id;
+            const fetchVideoUrl = "http://admin.frantisekklima.cz/data/videos/index.php?video=" + params.id;
             fetch(fetchVideoUrl)
              .then(result => result.json())
              .then(videoUrl => setVideoUrl(videoUrl))
              .then(loading => setLoading(false))
 
-            const url = "https://webinar.dotter.cz/data/JSON/index.php?video=   " + params.id;
+            const url = "http://admin.frantisekklima.cz/data/JSON/index.php?video=   " + params.id;
             fetch(url)
              .then(result => result.json())
              .then(data => setData(data))
@@ -93,7 +93,7 @@ const ChatWindow = () => {
                                         data.filter(data => data.showAtTime <= showAt).map((commentData, index)=>{
                                             return (
                                                 <div key={index} className={commentData.position}>
-                                                    <div className="direct-chat-info clearfix"> <span className="direct-chat-name pull-right">{commentData.name}</span> <span className="direct-chat-timestamp pull-left">{commentData.hours}:{commentData.minutes}</span> </div> <img className="direct-chat-img" src="https://img.icons8.com/office/36/000000/person-female.png" alt="message user image" />
+                                                    <div className="direct-chat-info clearfix"> <span className="direct-chat-name pull-right">{commentData.name}</span> <span className="direct-chat-timestamp pull-left">{commentData.hours}:{commentData.minutes}</span> </div> <img className="direct-chat-img" src="https://img.icons8.com/office/36/000000/person-female.png" alt="message user" />
                                                     <div className="direct-chat-text"> {commentData.comment} </div>
                                                 </div>
                                             )
