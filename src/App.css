@@ -29,10 +29,6 @@ body{
     min-width: 100%
 }
 
-body {
-    background-color: #f9f9fa
-}
-
 .flex {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 auto;
@@ -397,8 +393,55 @@ body {
     display: flex;
     /* justify-content: center; */
     align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.bg-black {
+    background-color: #000;
 }
 
 .react-player {
     margin: 0 auto;
+}
+
+div#page-content {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 400px;
+}
+
+.mb-2 {
+    margin-bottom: 1rem;
+}
+
+.register-btn {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #B31E1E;
+    border-radius: 36px 36px 36px 36px;
+    padding: 20px 40px;
+    box-shadow: 0 15px 25px -7px rgb(0 0 0 / 10%);
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 2rem;
+}
+
+.controls {
+    width: 95%;
+    margin: -50px auto 0 auto;
+    position: relative;
+    height: 50px;
+    display: flex;
+    background: #0000005c;
+    justify-content: flex-end;
+}
+
+.controls button {
+    background: no-repeat;
+    border: none;
+    font-size: 24px;
+    color: #fff;
 }
