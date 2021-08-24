@@ -48,7 +48,7 @@ const ChatWindow = () => {
 
     //  console.log(videoUrl[0].url);
     
-    const MINUTE_MS = 3000;
+    const MINUTE_MS = 1000;
 
     useEffect(() => {
 
@@ -60,7 +60,7 @@ const ChatWindow = () => {
              .then(videoUrl => setVideoUrl(videoUrl))
              .then(loading => setLoading(false))
 
-            const url = "http://admin.frantisekklima.cz/data/JSON/index.php?video=   " + params.id;
+            const url = "http://admin.frantisekklima.cz/data/JSON/index.php?video=" + params.id + "&email=" + params.email;
             fetch(url)
              .then(result => result.json())
              .then(data => setData(data))
@@ -143,7 +143,7 @@ const ChatWindow = () => {
                                         data.filter(data => data.showAtTime <= showAt).map((commentData, index)=>{
                                             return (
                                                 <div key={index} className={commentData.position}>
-                                                    <div className="direct-chat-info clearfix"> <span className="direct-chat-name pull-right">{commentData.name}</span> <span className="direct-chat-timestamp pull-left">{commentData.hours}:{commentData.minutes}</span> </div> <img className="direct-chat-img" src="https://img.icons8.com/office/36/000000/person-female.png" alt="message user" />
+                                                    <div className="direct-chat-info clearfix"> <span className="direct-chat-name pull-right">{commentData.author === 'admin' ? 'Skrytý email' : commentData.name + ' (Ostatní nevidí Váš email)'}</span> <span className="direct-chat-timestamp pull-left">{commentData.hours}:{commentData.minutes}</span> </div> <img className="direct-chat-img" src="https://img.icons8.com/office/36/000000/person-female.png" alt="message user" />
                                                     <div className="direct-chat-text"> {commentData.comment} </div>
                                                 </div>
                                             )
@@ -153,7 +153,7 @@ const ChatWindow = () => {
                                     </div>
                                 </div>
                                 {/* <PostComment videoId={params.id} /> */}
-                                <PostComment videoId={params.id} name='Email není známý' showAt={showAt} />
+                                <PostComment videoId={params.id} name={params.email} showAt={showAt} position='direct-chat-msg right' />
                             </div>
                         </div>
                     </div>

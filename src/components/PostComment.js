@@ -30,7 +30,6 @@ const PostComment = (props) => {
     function handleFormSubmit( event ) {
         event.preventDefault();
 
-
         if(!comment) {
             console.log('Empty comment');
         } else {
@@ -39,6 +38,8 @@ const PostComment = (props) => {
             formData.append('comment', comment)
             formData.append('videoId', props.videoId)
             formData.append('showAt', props.showAt)
+            formData.append('author', props.name)
+            formData.append('position', props.position)
 
             axios({
                 method: 'post',
@@ -62,14 +63,12 @@ const PostComment = (props) => {
 
     return (
         <div className="box-footer">
-            <form>
-                <div className="input-group">
-                    <input type="text" name="message" id='commentInput' value={comment} onChange={e => setComment(e.target.value)} placeholder="Napsat komentář" className="form-control" />
-                    <span className="input-group-btn">
-                        <button type="button" className="btn btn-warning btn-flat" onClick={handleFormSubmit}>Odeslat</button>
-                    </span>
-                </div>
-            </form>
+            <div className="input-group">
+                <input type="text" name="message" id='commentInput' value={comment} onChange={e => setComment(e.target.value)} placeholder="Napsat komentář" className="form-control" />
+                <span className="input-group-btn">
+                    <button type="button" className="btn btn-warning btn-flat" onClick={handleFormSubmit}>Odeslat</button>
+                </span>
+            </div>
         </div>
     )
 }
