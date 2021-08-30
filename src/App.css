@@ -466,7 +466,7 @@ div#page-content.show {
     transition: .3s;
 }
 
-.chat-icon-wrapper {
+button.chat-icon-wrapper {
     outline: none;
     border: none;
     position: fixed;
