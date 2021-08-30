@@ -1,7 +1,7 @@
 {
   "name": "chat",
   "version": "0.1.0",
-  "homepage": "http://webinar.frantisekklima.cz/",
+  "homepage": "https://webinar.frantisekklima.cz/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
