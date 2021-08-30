@@ -43,14 +43,13 @@ const PostComment = (props) => {
 
             axios({
                 method: 'post',
-                url: 'http://admin.frantisekklima.cz/data/JSON/post.php',
+                url: 'https://admin.frantisekklima.cz/data/JSON/post.php',
                 data: formData,
                 config: { headers: {'Content-Type': 'multipart/form-data' }}
             })
             .then(function (response) {
                 //handle success
                 // console.log(response)
-
             })
             .catch(function (response) {
                 //handle error
@@ -63,7 +62,7 @@ const PostComment = (props) => {
 
     return (
         <div className="box-footer">
-            <div className="input-group">
+            <div className="input-group justify-content-center">
                 <input type="text" name="message" id='commentInput' value={comment} onChange={e => setComment(e.target.value)} placeholder="Napsat komentář" className="form-control" />
                 <span className="input-group-btn">
                     <button type="button" className="btn btn-warning btn-flat" onClick={handleFormSubmit}>Odeslat</button>

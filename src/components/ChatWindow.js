@@ -10,6 +10,7 @@ import { FaPlay } from 'react-icons/fa';
 import { GiPauseButton } from 'react-icons/gi';
 import { BsFillVolumeMuteFill } from 'react-icons/bs';
 import { GoUnmute } from 'react-icons/go';
+import { GrChat } from 'react-icons/gr'
 
 const ChatWindow = () => {
 
@@ -28,6 +29,7 @@ const ChatWindow = () => {
 
     const [ifMuted, setIfMuted] = useState(true);
     const [playing, setPlaying] = useState(true);
+    const [chat, setChat] = useState(false);
 
     const unmute = () => {
         !ifMuted ? setIfMuted(true) : setIfMuted(false)
@@ -38,6 +40,10 @@ const ChatWindow = () => {
         !playing ? setPlaying(true) : setPlaying(false)
     }
 
+    const handleChat = () => {
+        !chat ? setChat(true) : setChat(false);
+        !chat ? console.log('chat showing now') : console.log('chat hidden now');
+    }
 
     const handleWatchComplete = state => {
 
@@ -54,13 +60,13 @@ const ChatWindow = () => {
 
         const interval = setInterval(() => {
 
-            const fetchVideoUrl = "http://admin.frantisekklima.cz/data/videos/index.php?video=" + params.id;
+            const fetchVideoUrl = "https://admin.frantisekklima.cz/data/videos/index.php?video=" + params.id;
             fetch(fetchVideoUrl)
              .then(result => result.json())
              .then(videoUrl => setVideoUrl(videoUrl))
              .then(loading => setLoading(false))
 
-            const url = "http://admin.frantisekklima.cz/data/JSON/index.php?video=" + params.id + "&email=" + params.email;
+            const url = "https://admin.frantisekklima.cz/data/JSON/index.php?video=" + params.id + "&email=" + params.email;
             fetch(url)
              .then(result => result.json())
              .then(data => setData(data))
@@ -98,6 +104,9 @@ const ChatWindow = () => {
 
     return (
         <div className="chat-window">
+            <button className='chat-icon-wrapper' onClick={handleChat}>
+                <GrChat />
+            </button>
             <div className='player-calibrator'>
                 <div className='bg-black'>
                     {/* <ResponsivePlayer
@@ -128,13 +137,14 @@ const ChatWindow = () => {
                 <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/ZISKEJ-TOT-VSECHNO2-1024x535.jpg' alt='20'/>
                 <a className='register-btn' href='https://www.frantisekklima.cz/purchase/?plan=648&redirect=https%3A%2F%2Fwww.frantisekklima.cz%2Fpraxe%2F'>Zaregistruj se ještě dnes!</a>
             </div>
-            <div className="page-content page-container" id="page-content">
+            <div className={!chat ? 'page-content page-container' : 'page-content page-container show'} id="page-content">
                 <div className="padding">
                     <div className="row container d-flex justify-content-center">
                         <div className="col-md-4">
                             <div className="box box-warning direct-chat direct-chat-warning">
                                 <div className="box-header with-border">
                                     <h3 className="box-title">Chat</h3>
+                                    <button className='close-chat-btn' onClick={handleChat}>X</button>
                                 </div>
                                 <div className="box-body">
                                     <div className="direct-chat-messages">
