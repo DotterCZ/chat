@@ -28,7 +28,7 @@ const ChatWindow = () => {
     const [loading, setLoading] = useState(true);
 
     const [ifMuted, setIfMuted] = useState(true);
-    const [playing, setPlaying] = useState(true);
+    const [playing, setPlaying] = useState(false);
     const [chat, setChat] = useState(false);
 
     const unmute = () => {

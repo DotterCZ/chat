@@ -483,11 +483,7 @@ button.chat-icon-wrapper {
 }
 
 .box-header.with-border .close-chat-btn {
-    margin-left: auto;
-    border: none;
-    color: #fff;
-    background: no-repeat;
-    font-size: 1rem;
+    display: none;
 }
 
 @media (min-width: 1000px) {
@@ -505,4 +501,34 @@ button.chat-icon-wrapper {
     .chat-icon-wrapper {
         display: none;
     }
+}
+
+@media (max-width: 1000px) {
+    .box-header.with-border .close-chat-btn {
+        display: initial;
+        margin-left: auto;
+        border: none;
+        color: #fff;
+        background: no-repeat;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+
+    div#page-content {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 100%;
+    }
+
+    div#page-content.show {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        transition: .3s;
+    }
+
 }
