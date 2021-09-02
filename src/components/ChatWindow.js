@@ -28,7 +28,7 @@ const ChatWindow = () => {
     const [loading, setLoading] = useState(true);
 
     const [ifMuted, setIfMuted] = useState(true);
-    const [playing, setPlaying] = useState(false);
+    const [playing, setPlaying] = useState(true);
     const [chat, setChat] = useState(false);
 
     const unmute = () => {
@@ -76,7 +76,7 @@ const ChatWindow = () => {
 
           return () => clearInterval(interval);
        
-    }, [data, videoUrl, params])    
+    }, [data, videoUrl, params])
 
     function renderVideo() {
         return (
@@ -88,8 +88,8 @@ const ChatWindow = () => {
 
                     className='react-player'
                     url={videoUrl[0].url}
-                    width='95%'
-                    height='95%'
+                    width='100%'
+                    height='100%'
 
                     onProgress={handleWatchComplete}
                 />
@@ -115,8 +115,46 @@ const ChatWindow = () => {
                     <img src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/SLEDUJ-A-OBJEV-MOJE-1024x302.jpg' alt='1'/>
                     <img src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/Uz-pres-700-lidi-pouziva-tyto-3-uspesne-praktiky-a-jejich-vysledky-mnohdy-prekvapi-i-me-1024x172.jpg' alt='2'/>
                     <div className='player-wrapper'>
+                        {/* VIDEO SECTION */}
                         {!loading ? renderVideo() : 'Připojování k živému vysílání!'}
+                        {/* END OF VIDEO SECTION */}
+
+                        {/* CHAT SECTION */}
+                        <div className={!chat ? 'page-content page-container' : 'page-content page-container show'} id="page-content">
+                            <div className="padding">
+                                <div className="row container d-flex justify-content-center">
+                                    <div className="col-md-4">
+                                        <div className="box box-warning direct-chat direct-chat-warning">
+                                            <div className="box-header with-border">
+                                                <h3 className="box-title">Chat</h3>
+                                                <button className='close-chat-btn' onClick={handleChat}>X</button>
+                                            </div>
+                                            <div className="box-body">
+                                                <div className="direct-chat-messages">
+                                                    
+                                                {
+                                                    data.filter(data => data.showAtTime <= showAt).map((commentData, index)=>{
+                                                        return (
+                                                            <div key={index} className={commentData.position}>
+                                                                <div className="direct-chat-info clearfix"> <span className="direct-chat-name pull-right">{commentData.author === 'admin' ? 'Skrytý email' : commentData.name + ' (Ostatní nevidí Váš email)'}</span> <span className="direct-chat-timestamp pull-left">{commentData.hours}:{commentData.minutes}</span> </div>
+                                                                <div className="direct-chat-text"> {commentData.comment} </div>
+                                                            </div>
+                                                        )
+                                                    })
+                                                }
+
+                                                </div>
+                                            </div>
+                                            {/* <PostComment videoId={params.id} /> */}
+                                            <PostComment videoId={params.id} name={params.email} showAt={showAt} position='direct-chat-msg right' />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {/* END OF CHAT SECTION */}
                     </div>
+                    
                     <img src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/Pridat-nadpis1-1024x640.jpg' alt='3'/>
                 </div>
                 <img src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/CO-JE-UVNITR-KURZU-FINANCE-POD-PALCEM1-1024x742.jpg' alt='4'/>
@@ -137,39 +175,6 @@ const ChatWindow = () => {
                 <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/ZISKEJ-TOT-VSECHNO2-1024x535.jpg' alt='20'/>
                 <a className='register-btn' href='https://www.frantisekklima.cz/purchase/?plan=648&redirect=https%3A%2F%2Fwww.frantisekklima.cz%2Fpraxe%2F'>Zaregistruj se ještě dnes!</a>
             </div>
-            <div className={!chat ? 'page-content page-container' : 'page-content page-container show'} id="page-content">
-                <div className="padding">
-                    <div className="row container d-flex justify-content-center">
-                        <div className="col-md-4">
-                            <div className="box box-warning direct-chat direct-chat-warning">
-                                <div className="box-header with-border">
-                                    <h3 className="box-title">Chat</h3>
-                                    <button className='close-chat-btn' onClick={handleChat}>X</button>
-                                </div>
-                                <div className="box-body">
-                                    <div className="direct-chat-messages">
-                                        
-                                    {
-                                        data.filter(data => data.showAtTime <= showAt).map((commentData, index)=>{
-                                            return (
-                                                <div key={index} className={commentData.position}>
-                                                    <div className="direct-chat-info clearfix"> <span className="direct-chat-name pull-right">{commentData.author === 'admin' ? 'Skrytý email' : commentData.name + ' (Ostatní nevidí Váš email)'}</span> <span className="direct-chat-timestamp pull-left">{commentData.hours}:{commentData.minutes}</span> </div> <img className="direct-chat-img" src="https://img.icons8.com/office/36/000000/person-female.png" alt="message user" />
-                                                    <div className="direct-chat-text"> {commentData.comment} </div>
-                                                </div>
-                                            )
-                                        })
-                                    }
-
-                                    </div>
-                                </div>
-                                {/* <PostComment videoId={params.id} /> */}
-                                <PostComment videoId={params.id} name={params.email} showAt={showAt} position='direct-chat-msg right' />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
         </div>
 
     );
