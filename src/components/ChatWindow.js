@@ -157,23 +157,27 @@ const ChatWindow = () => {
                     
                     <img src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/Pridat-nadpis1-1024x640.jpg' alt='3'/>
                 </div>
-                <img src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/CO-JE-UVNITR-KURZU-FINANCE-POD-PALCEM1-1024x742.jpg' alt='4'/>
-                <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/4.-arrowstocoursesections-1024x49.jpg' alt='6'/>
-                <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/1-1-1024x383.jpg' alt='7'/>
-                <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/2-1-1024x383.jpg' alt='8'/>
-                <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/3-1024x383.jpg' alt='9'/>
-                <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/4-1024x383.jpg' alt='10'/>
-                <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/5-1024x383.jpg' alt='11'/>
-                <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/6-1024x383.jpg' alt='12'/>
-                <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/7-1024x383.jpg' alt='13'/>
-                <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/8-1024x383.jpg' alt='14'/>
-                <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/9-1024x383.jpg' alt='15'/>
-                <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/1.arrow_-1024x85.jpg' alt='16'/>
-                <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/VEDOMOSTMI1-1024x215.jpg' alt='17'/>
-                <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/TO-JE1-scaled-e1624890854192-947x1024.jpg' alt='18'/>
-                <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/Navrh-bez-nazvu12aa2.png' alt='19'/>
-                <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/ZISKEJ-TOT-VSECHNO2-1024x535.jpg' alt='20'/>
-                <a className='register-btn' href='https://www.frantisekklima.cz/purchase/?plan=648&redirect=https%3A%2F%2Fwww.frantisekklima.cz%2Fpraxe%2F'>Zaregistruj se ještě dnes!</a>
+                <div className='padding-side'>
+                    <img src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/CO-JE-UVNITR-KURZU-FINANCE-POD-PALCEM1-1024x742.jpg' alt='4'/>
+                    <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/4.-arrowstocoursesections-1024x49.jpg' alt='6'/>
+                    <div className='padding-side'>
+                        <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/1-1-1024x383.jpg' alt='7'/>
+                        <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/2-1-1024x383.jpg' alt='8'/>
+                        <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/3-1024x383.jpg' alt='9'/>
+                        <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/4-1024x383.jpg' alt='10'/>
+                        <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/5-1024x383.jpg' alt='11'/>
+                        <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/6-1024x383.jpg' alt='12'/>
+                        <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/7-1024x383.jpg' alt='13'/>
+                        <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/8-1024x383.jpg' alt='14'/>
+                        <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/9-1024x383.jpg' alt='15'/>
+                        <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/1.arrow_-1024x85.jpg' alt='16'/>
+                        <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/VEDOMOSTMI1-1024x215.jpg' alt='17'/>
+                        <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/TO-JE1-scaled-e1624890854192-947x1024.jpg' alt='18'/>
+                        <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/Navrh-bez-nazvu12aa2.png' alt='19'/>
+                        <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/ZISKEJ-TOT-VSECHNO2-1024x535.jpg' alt='20'/>
+                        <a className='register-btn' href='https://www.frantisekklima.cz/purchase/?plan=648&redirect=https%3A%2F%2Fwww.frantisekklima.cz%2Fpraxe%2F'>Zaregistruj se ještě dnes!</a>
+                    </div>
+                </div>
             </div>
         </div>
 

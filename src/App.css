@@ -402,7 +402,7 @@ body{
 }
 
 .bg-black {
-    padding: 0 10%;
+    padding: 0 15%;
     background-color: #000;
 }
 
@@ -471,6 +471,21 @@ button.chat-icon-wrapper {
 
 .box-header.with-border .close-chat-btn {
     display: none;
+}
+
+.padding-side {
+    padding: 0 15%;
+}
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+a.register-btn{
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    margin: 0 auto 2rem auto;
 }
 
 @media (min-width: 500px) {
