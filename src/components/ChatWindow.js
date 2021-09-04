@@ -4,6 +4,9 @@ import React, { useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
 import { useParams } from 'react-router';
 import PostComment from './PostComment';
+import Timer from './Timer';
+import '../Youtube.css';
+import '../Accordian.css';
 
 // ICONS IMPORT
 import { FaPlay } from 'react-icons/fa';
@@ -11,6 +14,9 @@ import { GiPauseButton } from 'react-icons/gi';
 import { BsFillVolumeMuteFill } from 'react-icons/bs';
 import { GoUnmute } from 'react-icons/go';
 import { GrChat } from 'react-icons/gr'
+import YoutubeEmbed from './YoutubeEmbed';
+import Accordian from './Accordian';
+import AccordianItem from './AccordianItem';
 
 const ChatWindow = () => {
 
@@ -101,6 +107,7 @@ const ChatWindow = () => {
         )
     }
     
+    const year = new Date().getFullYear();
 
     return (
         <div className="chat-window">
@@ -175,7 +182,74 @@ const ChatWindow = () => {
                         <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/TO-JE1-scaled-e1624890854192-947x1024.jpg' alt='18'/>
                         <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/Navrh-bez-nazvu12aa2.png' alt='19'/>
                         <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/ZISKEJ-TOT-VSECHNO2-1024x535.jpg' alt='20'/>
+                        
+                        <div className='register-btn-wrapper'>
                         <a className='register-btn' href='https://www.frantisekklima.cz/purchase/?plan=648&redirect=https%3A%2F%2Fwww.frantisekklima.cz%2Fpraxe%2F'>Zaregistruj se ještě dnes!</a>
+                        </div>
+
+                        <div className='timer'>
+                            <Timer />
+                        </div>
+
+                        <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/CO-RIKAJI-NASI-STUDENTI.jpg' alt='img' />
+
+                        <YoutubeEmbed embedId='X66ksdsansY' />
+
+                        <YoutubeEmbed embedId='uREqLtAX2Zs' />
+
+                        <YoutubeEmbed embedId='o470uXhzQ8o' />
+                        
+                        <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/Pridat-nadpis2.jpg' alt='img' />
+                        
+                        <Accordian title='PŘEDSTAVENÍ' />
+                        <AccordianItem title='Jak použít tento kurz, abys byl úspěšný' url='https://www.frantisekklima.cz/lesson/jak-pouzit-tento-kurz-abyste-byli-uspesni-3/' progress={true} />
+                        <AccordianItem title='Jak získat CERTIFIKÁT' url='https://www.frantisekklima.cz/lesson/jak-ziskat-2/' progress={false} />
+                        <AccordianItem title='Příběh Františka Klímy' url='https://www.frantisekklima.cz/lesson/pribeh-frantiska-klimy-5/' progress={true} />
+                        <AccordianItem title='BONUS: VIP Facebook skupina' url='https://www.frantisekklima.cz/lesson/bonus-vip-facebook-skupina-3/' progress={true} />
+                        
+                        <Accordian title='Finance pod palcem' />
+                        <AccordianItem title='ÚVOD' url='https://www.frantisekklima.cz/lesson/uvod-5/' progress={true} />
+                        <AccordianItem title='Co nám stát neříká...' url='https://www.frantisekklima.cz/lesson/cast-1-5/' progress={false} />
+                        <AccordianItem title='Svět financí' url='https://www.frantisekklima.cz/lesson/svet-financi/' progress={false} />
+                        <AccordianItem title='Rozložení investic (diverzifikace)' url='https://www.frantisekklima.cz/lesson/cast-2-5/' progress={false} />
+                        <AccordianItem title='Nemovitosti' url='https://www.frantisekklima.cz/lesson/cast-3-5/' progress={false} />
+                        <AccordianItem title='Peníze a cenné papíry' url='https://www.frantisekklima.cz/lesson/penize-a-cenne-papiry-2/' progress={false} />
+                        <AccordianItem title='Zlato' url='https://www.frantisekklima.cz/lesson/komodity-2/' progress={false} />
+                        <AccordianItem title='Pojištění' url='https://www.frantisekklima.cz/lesson/zajisteni-osob-2/' progress={false} />
+                        <AccordianItem title='Zajištění majetku' url='https://www.frantisekklima.cz/lesson/zajisteni-majetku-2/' progress={false} />
+                        <AccordianItem title='Úvěry a hypotéky' url='https://www.frantisekklima.cz/lesson/hypoteky/' progress={false} />
+                        <AccordianItem title='Plyn a elektřina' url='https://www.frantisekklima.cz/lesson/plyny-a-elektrina/' progress={false} />
+                        <AccordianItem title='KVÍZ' url='https://www.frantisekklima.cz/lesson/quiz-6/' progress={false} />
+                        
+                        <Accordian title='BONUSY' />
+                        <AccordianItem title='BONUS: Příklad z praxe' url='https://www.frantisekklima.cz/lesson/jdi-do-toho/' progress={false} />
+                        <AccordianItem title='Ty vyděláváš, my pracujeme - 46,000 Kč za první týden?' url='https://www.frantisekklima.cz/lesson/ty-vydelavas-my-pracujeme-budouci-milionar/' progress={false} />
+
+                        <Accordian title='Vědomosti ke svobodě' />
+                        <AccordianItem title='Jaké je tvoje PROČ?' url='https://www.frantisekklima.cz/lesson/jake-je-vase-proc-5/' progress={true} />
+                        <AccordianItem title='Nástěnka plná snů a psaní do deníku' url='https://www.frantisekklima.cz/lesson/nastenka-plna-snu-a-psani-do-deniku-5/' progress={false} />
+                        <AccordianItem title='Kniha, kterou MUSÍŠ přečíst' url='https://www.frantisekklima.cz/lesson/kniha-kterou-musite-precist-5/' progress={false} />
+                        <AccordianItem title='Jak správně plánovat?' url='https://www.frantisekklima.cz/lesson/time-management-2-2/' progress={false} />
+                        <AccordianItem title='Buď jiný než ostatní' url='https://www.frantisekklima.cz/lesson/princip-byznysu-4-2/' progress={false} />
+
+                        <img className='mb-2 mt-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/PRIPRAVEN-PRIDAT-SE.jpg' alt='img'/>
+                        
+                        <div className='register-btn-wrapper'>
+                            <a className='register-btn' href='https://www.frantisekklima.cz/purchase/?plan=648&redirect=https%3A%2F%2Fwww.frantisekklima.cz%2Fpraxe%2F'>Zaregistruj se ještě dnes!</a>
+                        </div>
+
+                        <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/1.490.jpg' alt='img' />
+
+                        <div className='timer'>
+                            <Timer />
+                        </div>
+                    </div>
+                </div>
+                <div className='footer'>
+                    <span>&copy; František Klíma - {year}</span>
+                    <div className='footer-link'>
+                        <a href='https://www.frantisekklima.cz/vseobecne-obchodni-podminky/'>Všeobecné obchodní podmínky</a>
+                        <a href='https://www.frantisekklima.cz/ochrana-osobnich-udaju/'>GDPR</a>
                     </div>
                 </div>
             </div>
