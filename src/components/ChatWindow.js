@@ -87,6 +87,9 @@ const ChatWindow = () => {
     function renderVideo() {
         return (
             <div className='video-surrounding'>
+                <div className='overlay-play-btn-wrapper'>
+                    <button className='overlay-play-btn'><FaPlay /></button>
+                </div>
                 <ReactPlayer
                     controls={false}
                     playing={playing}
