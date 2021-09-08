@@ -87,9 +87,13 @@ const ChatWindow = () => {
     function renderVideo() {
         return (
             <div className='video-surrounding'>
-                <div className='overlay-play-btn-wrapper'>
+                {/* START BUTTON */}
+
+                {/* <div className='overlay-play-btn-wrapper'>
                     <button className='overlay-play-btn'><FaPlay /></button>
-                </div>
+                </div> */}
+
+                {/* END OF START BUTTON */}
                 <ReactPlayer
                     controls={false}
                     playing={playing}
@@ -114,9 +118,9 @@ const ChatWindow = () => {
 
     return (
         <div className="chat-window">
-            <button className='chat-icon-wrapper' onClick={handleChat}>
+            {/* <button className='chat-icon-wrapper' onClick={handleChat}>
                 <GrChat />
-            </button>
+            </button> */}
             <div className='player-calibrator'>
                 <div className='bg-black'>
                     {/* <ResponsivePlayer
@@ -137,7 +141,7 @@ const ChatWindow = () => {
                                         <div className="box box-warning direct-chat direct-chat-warning">
                                             <div className="box-header with-border">
                                                 <h3 className="box-title">Chat</h3>
-                                                <button className='close-chat-btn' onClick={handleChat}>X</button>
+                                                {/* <button className='close-chat-btn' onClick={handleChat}>X</button> */}
                                             </div>
                                             <div className="box-body">
                                                 <div className="direct-chat-messages">
@@ -170,8 +174,8 @@ const ChatWindow = () => {
                 <div className='padding-side'>
                     <img src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/CO-JE-UVNITR-KURZU-FINANCE-POD-PALCEM1-1024x742.jpg' alt='4'/>
                     <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/4.-arrowstocoursesections-1024x49.jpg' alt='6'/>
-                    <div className='padding-side'>
-                        <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/1-1-1024x383.jpg' alt='7'/>
+
+                    <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/1-1-1024x383.jpg' alt='7'/>
                         <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/2-1-1024x383.jpg' alt='8'/>
                         <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/3-1024x383.jpg' alt='9'/>
                         <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/4-1024x383.jpg' alt='10'/>
@@ -246,7 +250,7 @@ const ChatWindow = () => {
                         <div className='timer'>
                             <Timer />
                         </div>
-                    </div>
+
                 </div>
                 <div className='footer'>
                     <span>&copy; František Klíma - {year}</span>

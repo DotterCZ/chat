@@ -489,6 +489,7 @@ button.chat-icon-wrapper {
 .padding-side {
     padding: 0 15%;
 }
+
 .center {
     display: flex;
     flex-direction: column;
@@ -516,7 +517,7 @@ button.chat-icon-wrapper {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 1rem;
+    margin: 0 1rem 1rem 0;
     background: #000;
     color: #fff;
     border-radius: 25px;
@@ -552,5 +553,22 @@ button.chat-icon-wrapper {
 @media (min-width: 500px) {
     .chat-icon-wrapper {
         display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .padding-side,
+    .bg-black {
+        padding: 0 5%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer .footer-link {
+        text-align: center;
+        margin-top: 10px;
     }
 }
