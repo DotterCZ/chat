@@ -13,7 +13,7 @@ import { FaPlay } from 'react-icons/fa';
 import { GiPauseButton } from 'react-icons/gi';
 import { BsFillVolumeMuteFill } from 'react-icons/bs';
 import { GoUnmute } from 'react-icons/go';
-import { GrChat } from 'react-icons/gr'
+// import { GrChat } from 'react-icons/gr';
 import YoutubeEmbed from './YoutubeEmbed';
 import Accordian from './Accordian';
 import AccordianItem from './AccordianItem';
