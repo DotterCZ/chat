@@ -1,0 +1,26 @@
+body .email-wrapper {
+    background-color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #ededed;
+    padding-bottom: 5px;
+    /* width: 100%; */
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn-warning {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+    margin-left: 10px;
+}
