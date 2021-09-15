@@ -7,6 +7,7 @@ import PostComment from './PostComment';
 import Timer from './Timer';
 import '../Youtube.css';
 import '../Accordian.css';
+import ScrollableFeed from 'react-scrollable-feed'
 
 // ICONS IMPORT
 import { FaPlay } from 'react-icons/fa';
@@ -146,6 +147,7 @@ const ChatWindow = () => {
                                             <div className="box-body">
                                                 <div className="direct-chat-messages">
                                                     
+                                                <ScrollableFeed>
                                                 {
                                                     data.filter(data => data.showAtTime <= showAt).map((commentData, index)=>{
                                                         return (
@@ -156,6 +158,7 @@ const ChatWindow = () => {
                                                         )
                                                     })
                                                 }
+                                                </ScrollableFeed>
 
                                                 </div>
                                             </div>
