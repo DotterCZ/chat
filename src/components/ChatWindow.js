@@ -95,8 +95,21 @@ const ChatWindow = () => {
                 </div> */}
 
                 {/* END OF START BUTTON */}
+
+                {/* <video
+                src={videoUrl[0].url}
+                autoplay='autoplay'
+                muted='muted'
+
+                className='react-player'
+                url={videoUrl[0].url}
+                width='100%'
+                height='100%'
+
+                // onProgress={handleWatchComplete}
+                /> */}
+
                 <ReactPlayer
-                    controls={false}
                     playing={playing}
                     muted={ifMuted}
 
@@ -104,6 +117,9 @@ const ChatWindow = () => {
                     url={videoUrl[0].url}
                     width='100%'
                     height='100%'
+                    playsinline={true}
+                    stopOnUnmount={false}
+                    pip={true}
 
                     onProgress={handleWatchComplete}
                 />

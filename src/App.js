@@ -6,6 +6,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import LogIn from './components/LogIn';
 
 const App = () => {
   return (
@@ -13,6 +14,10 @@ const App = () => {
       <Switch>
         <Route path="/:id/:email" exact>
           <ChatWindow />
+        </Route>
+
+        <Route path="/:id/" exact>
+          <LogIn />
         </Route>
       </Switch>
     </Router>
