@@ -189,7 +189,7 @@ const ChatWindow = () => {
                         {/* END OF CHAT SECTION */}
                     </div>
                     
-                    <img src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/Pridat-nadpis1-1024x640.jpg' alt='3'/>
+                    <img src='https://webinar.frantisekklima.cz/images/nadpis.jpg' alt='3'/>
                 </div>
                 <div className='padding-side'>
                     <img src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/CO-JE-UVNITR-KURZU-FINANCE-POD-PALCEM1-1024x742.jpg' alt='4'/>
