@@ -20,10 +20,6 @@ const App = () => {
         <Route path="/:id/" exact>
           <LogIn />
         </Route>
-
-        <Route path="/">
-          <NewTimer />
-        </Route>
       </Switch>
     </Router>
   );
