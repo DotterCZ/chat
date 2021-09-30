@@ -7,6 +7,7 @@ import {
   Route
 } from "react-router-dom";
 import LogIn from './components/LogIn';
+import NewTimer from './components/NewTimer';
 
 const App = () => {
   return (
@@ -18,6 +19,10 @@ const App = () => {
 
         <Route path="/:id/" exact>
           <LogIn />
+        </Route>
+
+        <Route path="/">
+          <NewTimer />
         </Route>
       </Switch>
     </Router>
