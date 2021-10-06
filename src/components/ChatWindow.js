@@ -56,7 +56,7 @@ const ChatWindow = () => {
     const handleWatchComplete = state => {
 
         setShowAt(state.playedSeconds);        
-        console.log(showAt);
+        // console.log(showAt); 
 
     }
 
