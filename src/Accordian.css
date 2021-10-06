@@ -1,0 +1,37 @@
+.accordian-heading {
+    margin-top: 4rem;
+}
+
+.accordian-heading h3 {
+    margin: 0px;
+    padding: 1.5rem 2rem;
+    border-bottom: 3px solid #EDF2F7;
+    background: #F7FAFC;
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #1A202C;
+}
+
+a.accordian-item-link {
+    text-decoration: none;
+}
+a.accordian-item-link .item {
+    
+    color: initial;
+    border-bottom: 1px solid #EDF2F7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a.accordian-item-link .item:hover {
+    background-color: #F7FAFC;
+}
+
+a.accordian-item-link .item {
+    padding: 1rem 2rem;
+}
+a.accordian-item-link h5 {
+    color: #1A202C90;
+}

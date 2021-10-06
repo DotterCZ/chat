@@ -6,13 +6,19 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import LogIn from './components/LogIn';
+import NewTimer from './components/NewTimer';
 
 const App = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/:id" exact>
+        <Route path="/:id/:email" exact>
           <ChatWindow />
+        </Route>
+
+        <Route path="/:id/" exact>
+          <LogIn />
         </Route>
       </Switch>
     </Router>
