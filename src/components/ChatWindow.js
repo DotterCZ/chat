@@ -18,6 +18,7 @@ import { GoUnmute } from 'react-icons/go';
 import YoutubeEmbed from './YoutubeEmbed';
 import Accordian from './Accordian';
 import AccordianItem from './AccordianItem';
+import NewTimer from './NewTimer';
 
 const ChatWindow = () => {
 
@@ -55,7 +56,7 @@ const ChatWindow = () => {
     const handleWatchComplete = state => {
 
         setShowAt(state.playedSeconds);        
-        console.log(showAt);
+        // console.log(showAt); 
 
     }
 
@@ -213,8 +214,9 @@ const ChatWindow = () => {
                         <a className='register-btn' href='https://www.frantisekklima.cz/purchase/?plan=648&redirect=https%3A%2F%2Fwww.frantisekklima.cz%2Fpraxe%2F'>Zaregistruj se ještě dnes!</a>
                         </div>
 
-                        <div className='timer'>
-                            <Timer />
+                        <div className='timer-box-wrapper'>
+                            {/* <Timer /> */}
+                            <NewTimer />
                         </div>
 
                         <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/CO-RIKAJI-NASI-STUDENTI.jpg' alt='img' />
@@ -266,8 +268,9 @@ const ChatWindow = () => {
 
                         <img className='mb-2' src='https://www.frantisekklima.cz/wp-content/uploads/2021/06/1.490.jpg' alt='img' />
 
-                        <div className='timer'>
-                            <Timer />
+                        <div className='timer-box-wrapper'>
+                            {/* <Timer /> */}
+                            <NewTimer />
                         </div>
 
                 </div>

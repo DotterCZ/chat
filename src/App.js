@@ -7,6 +7,7 @@ import {
   Route
 } from "react-router-dom";
 import LogIn from './components/LogIn';
+import NewTimer from './components/NewTimer';
 
 const App = () => {
   return (

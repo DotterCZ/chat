@@ -5,7 +5,7 @@ const Timer = () => {
     let newDate = new Date()
         let todayMonth = newDate.getMonth() + 1;
         let todayYear = newDate.getFullYear();
-        let todayDay = newDate.getDate() + 2;
+        let todayDay = newDate.getDate() + 1;
 
         const today = (todayDay - 1) + '.' + todayMonth + '.' + todayYear;
 
