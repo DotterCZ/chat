@@ -13,7 +13,7 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/:id/:email" exact>
+        <Route path="/:id/:nickname/:email" exact>
           <ChatWindow />
         </Route>
 

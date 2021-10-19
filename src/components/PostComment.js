@@ -34,11 +34,11 @@ const PostComment = (props) => {
             console.log('Empty comment');
         } else {
             let formData = new FormData();
-            formData.append('name', props.name)
+            formData.append('nickname', props.nickname)
             formData.append('comment', comment)
             formData.append('videoId', props.videoId)
             formData.append('showAt', props.showAt)
-            formData.append('author', props.name)
+            formData.append('author', props.email)
             formData.append('position', props.position)
 
             axios({
