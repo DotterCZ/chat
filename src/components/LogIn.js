@@ -46,8 +46,8 @@ const LogIn = (props) => {
                         </div>
                     </div>
                     <div className='p-div'>
-                        <p>*Na tento email tě budeme kontaktovat zpětně, abychom odpovědeli na tvé dotazy. Email je dobrovolný.</p>    
                         <p>*Přezdívka bude viditelná ostatním u každého komentáře, který napíšeš.</p>
+                        <p>*Na tento email tě budeme kontaktovat zpětně, abychom odpověděli na tvé dotazy. Email je dobrovolný.</p>    
                     </div>
                 </div>
 
